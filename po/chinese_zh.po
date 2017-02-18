@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Money Manager Ex\n"
 "Report-Msgid-Bugs-To: developer@moneymanagerex.org\n"
 "POT-Creation-Date: 2017-01-04 17:23+0300\n"
-"PO-Revision-Date: 2017-01-04 17:23+0300\n"
+"PO-Revision-Date: 2017-02-19 00:20+0800\n"
 "Last-Translator: Nikolay Akimov <vomikan@mail.ru>\n"
 "Language-Team: TheZeal Software\n"
 "Language: zh_TW\n"
@@ -33,32 +33,32 @@ msgstr "網站 :"
 
 #: src/aboutdialog.cpp:89
 msgid "Forum"
-msgstr ""
+msgstr "論壇"
 
 #: src/aboutdialog.cpp:91
 msgid "Wiki page"
-msgstr ""
+msgstr "Wiki網頁"
 
 #: src/aboutdialog.cpp:93
 #, fuzzy
 msgid "Bug reports"
-msgstr "報表"
+msgstr "問題回報"
 
 #: src/aboutdialog.cpp:96
 msgid "Follow MMEX on Facebook"
-msgstr ""
+msgstr "MMEX的Facebook"
 
 #: src/aboutdialog.cpp:98
 msgid "Follow MMEX on Twitter"
-msgstr ""
+msgstr "MMEX的Twitter"
 
 #: src/aboutdialog.cpp:100
 msgid "Donate"
-msgstr ""
+msgstr "捐獻"
 
 #: src/aboutdialog.cpp:102
 msgid "Buy us a coffee"
-msgstr ""
+msgstr "請我們一杯咖啡"
 
 #: src/aboutdialog.cpp:159
 #, c-format
@@ -72,23 +72,23 @@ msgstr "關於"
 
 #: src/aboutdialog.cpp:176
 msgid "Developers"
-msgstr ""
+msgstr "開發者"
 
 #: src/aboutdialog.cpp:181
 msgid "Artwork"
-msgstr ""
+msgstr "美工"
 
 #: src/aboutdialog.cpp:186
 msgid "Sponsors"
-msgstr ""
+msgstr "贊助者"
 
 #: src/aboutdialog.cpp:191
 msgid "License"
-msgstr ""
+msgstr "授權協議"
 
 #: src/aboutdialog.cpp:196
 msgid "Privacy"
-msgstr ""
+msgstr "隱私權"
 
 #: src/aboutdialog.cpp:234 src/accountdialog.cpp:373 src/appstartdialog.cpp:136
 #: src/assetdialog.cpp:301 src/attachmentdialog.cpp:118
@@ -104,7 +104,7 @@ msgstr ""
 #: src/splitdetailsdialog.cpp:151 src/splittransactionsdialog.cpp:170
 #: src/transdialog.cpp:516
 msgid "&OK "
-msgstr ""
+msgstr "確定(O)"
 
 #: src/accountdialog.cpp:86 src/mmframe.cpp:1443 src/mmframe.cpp:1636
 #: src/wizard_newaccount.cpp:79 src/wizard_newaccount.cpp:86
@@ -172,7 +172,7 @@ msgstr "帳目編號 :"
 
 #: src/accountdialog.cpp:274
 msgid "Held At:"
-msgstr "商戶名稱 :"
+msgstr "託管金融機構"
 
 #: src/accountdialog.cpp:280
 msgid "Website:"
@@ -189,52 +189,51 @@ msgstr "登入資訊"
 #: src/accountdialog.cpp:299
 #, fuzzy
 msgid "Statement"
-msgstr "開啟資料庫"
+msgstr "狀態"
 
 #: src/accountdialog.cpp:307
 #, fuzzy
 msgid "Statement:"
-msgstr "開啟資料庫"
+msgstr "狀態 :"
 
 #: src/accountdialog.cpp:308
 msgid "Locked"
-msgstr ""
+msgstr "鎖定"
 
 #: src/accountdialog.cpp:312
-#, fuzzy
 msgid "Reconciled Date:"
-msgstr "已核實"
+msgstr "已核實日期"
 
 #: src/accountdialog.cpp:317
 msgid "Minimum Bal:"
-msgstr ""
+msgstr "最小帳目淨值"
 
 #: src/accountdialog.cpp:324
 msgid "Credit"
-msgstr ""
+msgstr "信用卡"
 
 #: src/accountdialog.cpp:332
 msgid "Credit Limit:"
-msgstr ""
+msgstr "信用額度"
 
 #: src/accountdialog.cpp:337
 #, fuzzy
 msgid "Interest Rate:"
-msgstr "投資"
+msgstr "利率"
 
 #: src/accountdialog.cpp:341
 #, fuzzy
 msgid "Payment Due Date:"
-msgstr "下一次到期日"
+msgstr "付款截止日"
 
 #: src/accountdialog.cpp:346
 msgid "Minimum Payment:"
-msgstr ""
+msgstr "最少付款"
 
 #: src/accountdialog.cpp:368
 #, fuzzy
 msgid "Organize attachments of this account"
-msgstr "輸入交易的金額"
+msgstr "設定帳戶附件"
 
 #: src/accountdialog.cpp:381
 msgid "Enter the Name of the Account. This name can be renamed at any time."
@@ -262,7 +261,7 @@ msgstr "設定帳目所使用的貨幣。"
 msgid ""
 "Select whether this is an account that is used often. This is used to filter "
 "accounts display view."
-msgstr "選擇一個常用的帳目。這是為了顯示方便之用。"
+msgstr "是否為常用帳戶。這是為了顯示方便之用。"
 
 #: src/accountdialog.cpp:387
 msgid "Enter user notes and details about this account."
@@ -289,25 +288,26 @@ msgstr "輸入商戶的聯絡人。"
 msgid ""
 "Enter any login/access information for the financial institution. This is "
 "not secure as anyone with access to the mmb file can access it."
-msgstr "輸入商戶登入資訊。任何可存取mmb檔案的人都可以存取此資訊。"
+msgstr ""
+"輸入商戶登入資訊。這並不安全，因為任何可存取mmb檔案的人都可以存取此資訊。"
 
 #: src/accountdialog.cpp:394
 #, fuzzy
 msgid "Enable or disable the transaction Lock"
-msgstr "刪除交易"
+msgstr "啟用 或是 關閉 這個帳戶的記帳狀態"
 
 #: src/accountdialog.cpp:395
 #, fuzzy
 msgid "The date of the transaction lock"
-msgstr "設定交易的日期"
+msgstr "關閉記帳的日期"
 
 #: src/accountdialog.cpp:396
 msgid "Account balance lower limit. Zero to disable"
-msgstr ""
+msgstr "最小帳戶淨值，設0可以關閉設定"
 
 #: src/accountdialog.cpp:397
 msgid "Credit limit for the Account. Zero to disable"
-msgstr ""
+msgstr "信用額度，設0可以關閉設定"
 
 #: src/accountdialog.cpp:440
 msgid "Account Name "
@@ -321,7 +321,7 @@ msgstr "貨幣"
 #: src/accountdialog.cpp:503
 #, fuzzy
 msgid "Default Image"
-msgstr "選擇受帳人"
+msgstr "預設圖片"
 
 #: src/accountdialog.cpp:510
 #, c-format
@@ -369,16 +369,16 @@ msgstr "訪問網站以獲得更多資訊"
 #: src/appstartdialog.cpp:115
 #, fuzzy, c-format
 msgid "Open the %s website for latest news, updates etc"
-msgstr "查看 Money Manager Ex 網站上的最新消息、更新等"
+msgstr "查看 %s 網站上的最新消息、更新等"
 
 #: src/appstartdialog.cpp:123
 #, fuzzy, c-format
 msgid "Show this window next time %s starts"
-msgstr "當下次"
+msgstr "當下次開啟 %s 的時候，也開啟這個視窗"
 
 #: src/appstartdialog.cpp:137
 msgid "&Exit "
-msgstr ""
+msgstr "離開(E)"
 
 #: src/appstartdialog.cpp:153
 #, fuzzy, c-format
