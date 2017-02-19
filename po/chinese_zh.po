@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Money Manager Ex\n"
 "Report-Msgid-Bugs-To: developer@moneymanagerex.org\n"
 "POT-Creation-Date: 2017-01-04 17:23+0300\n"
-"PO-Revision-Date: 2017-02-19 00:20+0800\n"
+"PO-Revision-Date: 2017-02-19 16:02+0800\n"
 "Last-Translator: Nikolay Akimov <vomikan@mail.ru>\n"
 "Language-Team: TheZeal Software\n"
 "Language: zh_TW\n"
@@ -104,7 +104,7 @@ msgstr "隱私權"
 #: src/splitdetailsdialog.cpp:151 src/splittransactionsdialog.cpp:170
 #: src/transdialog.cpp:516
 msgid "&OK "
-msgstr "確定(O)"
+msgstr "確定(&O)"
 
 #: src/accountdialog.cpp:86 src/mmframe.cpp:1443 src/mmframe.cpp:1636
 #: src/wizard_newaccount.cpp:79 src/wizard_newaccount.cpp:86
@@ -231,9 +231,8 @@ msgid "Minimum Payment:"
 msgstr "最少付款"
 
 #: src/accountdialog.cpp:368
-#, fuzzy
 msgid "Organize attachments of this account"
-msgstr "設定帳戶附件"
+msgstr "管理帳戶附件"
 
 #: src/accountdialog.cpp:381
 msgid "Enter the Name of the Account. This name can be renamed at any time."
@@ -274,22 +273,22 @@ msgstr "輸入交易帳目的帳目編號。"
 #: src/accountdialog.cpp:389
 msgid ""
 "Enter the name of the financial institution in which the account is held."
-msgstr "輸入交易帳目的商戶名稱。"
+msgstr "輸入交易帳目的金融機構名稱。"
 
 #: src/accountdialog.cpp:390
 msgid "Enter the URL of the website for the financial institution."
-msgstr "輸入商戶的網址。"
+msgstr "輸入金融機構的網址。"
 
 #: src/accountdialog.cpp:391
 msgid "Enter any contact information for the financial institution."
-msgstr "輸入商戶的聯絡人。"
+msgstr "輸入金融機構的聯絡人。"
 
 #: src/accountdialog.cpp:392
 msgid ""
 "Enter any login/access information for the financial institution. This is "
 "not secure as anyone with access to the mmb file can access it."
 msgstr ""
-"輸入商戶登入資訊。這並不安全，因為任何可存取mmb檔案的人都可以存取此資訊。"
+"輸入金融機構登入資訊。這並不安全，因為任何可存取mmb檔案的人都可以存取此資訊。"
 
 #: src/accountdialog.cpp:394
 #, fuzzy
@@ -378,12 +377,12 @@ msgstr "當下次開啟 %s 的時候，也開啟這個視窗"
 
 #: src/appstartdialog.cpp:137
 msgid "&Exit "
-msgstr "離開(E)"
+msgstr "離開(&E)"
 
 #: src/appstartdialog.cpp:153
-#, fuzzy, c-format
+#, c-format
 msgid "Open the previously opened database : %s"
-msgstr "上次開啟的資料庫"
+msgstr "上次開啟的資料庫 : %s"
 
 #: src/assetdialog.cpp:59 src/assetdialog.cpp:406 src/assetspanel.cpp:468
 msgid "New Asset"
@@ -394,14 +393,12 @@ msgid "Edit Asset"
 msgstr "編輯資產"
 
 #: src/assetdialog.cpp:67 src/assetdialog.cpp:89 src/assetspanel.cpp:472
-#, fuzzy
 msgid "Add Asset Transaction"
-msgstr "編輯交易"
+msgstr "新增資產交易"
 
 #: src/assetdialog.cpp:93
-#, fuzzy
 msgid "Edit Asset Transaction"
-msgstr "編輯交易"
+msgstr "編輯資產交易"
 
 #: src/assetdialog.cpp:179
 msgid "Asset Details"
@@ -460,9 +457,8 @@ msgid "Specify if the value of the asset changes over time"
 msgstr "指定資產是否折舊"
 
 #: src/assetdialog.cpp:237
-#, fuzzy
 msgid "% Rate"
-msgstr " 日期 "
+msgstr " % 利率 "
 
 #: src/assetdialog.cpp:243
 #, fuzzy, c-format
@@ -470,34 +466,29 @@ msgid "Enter the rate at which the asset changes its value in % per year"
 msgstr "以百分比(%)的形式輸入資產變化的變化率"
 
 #: src/assetdialog.cpp:255
-#, fuzzy
 msgid "Organize attachments of this asset"
-msgstr "輸入交易的金額"
+msgstr "管理這項資產的附件"
 
 #: src/assetdialog.cpp:258
 msgid "Enter notes associated with this asset"
 msgstr "輸入該資產相關的註釋"
 
 #: src/assetdialog.cpp:264
-#, fuzzy
 msgid "New Transaction Details"
-msgstr "交易細節"
+msgstr "新增交易細節"
 
 #: src/assetdialog.cpp:267 src/sharetransactiondialog.cpp:279
-#, fuzzy
 msgid "Edit Transaction Details"
-msgstr "交易細節"
+msgstr "編輯交易細節"
 
 #: src/assetdialog.cpp:302 src/constants.cpp:82
 #: src/sharetransactiondialog.cpp:310
-#, fuzzy
 msgid "&Cancel "
-msgstr "取消"
+msgstr "取消(&C)"
 
 #: src/assetdialog.cpp:398 src/sharetransactiondialog.cpp:418
-#, fuzzy
 msgid "Invalid Transaction"
-msgstr "編輯交易"
+msgstr "無效交易"
 
 #: src/assetdialog.cpp:405
 msgid ""
@@ -505,11 +496,14 @@ msgid ""
 "\n"
 "Would you want to create one?"
 msgstr ""
+"找不到資產帳戶\n"
+"\n"
+"想建立一個新的嗎?"
 
 #: src/assetspanel.cpp:62 src/billsdepositspanel.cpp:95
 #: src/mmcheckingpanel.cpp:979 src/stockspanel.cpp:91
 msgid "ID"
-msgstr ""
+msgstr "代號"
 
 #: src/assetspanel.cpp:65 src/billsdepositsdialog.cpp:521
 #: src/billsdepositspanel.cpp:102 src/customfieldlistdialog.cpp:56
@@ -522,39 +516,33 @@ msgid "Type"
 msgstr "分類"
 
 #: src/assetspanel.cpp:66 src/reports/summarystocks.cpp:177
-#, fuzzy
 msgid "Initial Value"
-msgstr "無效值"
+msgstr "初始值"
 
 #: src/assetspanel.cpp:67 src/reports/summarystocks.cpp:147
 #: src/reports/summarystocks.cpp:181 src/stockdialog.cpp:264
-#, fuzzy
 msgid "Current Value"
-msgstr "即時檢視"
+msgstr "目前值"
 
 #: src/assetspanel.cpp:97
 msgid "&New Asset"
 msgstr "新增資產(&N)"
 
 #: src/assetspanel.cpp:99
-#, fuzzy
 msgid "D&uplicate Asset"
-msgstr "重複"
+msgstr "重複資產(&u)"
 
 #: src/assetspanel.cpp:101
-#, fuzzy
 msgid "&Add Asset Transaction"
-msgstr "編輯交易(&E)"
+msgstr "新增資產交易(&A)"
 
 #: src/assetspanel.cpp:102
-#, fuzzy
 msgid "&View Asset Transactions"
-msgstr "檢視所有交易"
+msgstr "檢視資產交易(&V)"
 
 #: src/assetspanel.cpp:103
-#, fuzzy
 msgid "&Open Asset Account"
-msgstr "刪除帳目(&D)"
+msgstr "開啟資產帳戶(&O)"
 
 #: src/assetspanel.cpp:105
 msgid "&Edit Asset"
@@ -567,13 +555,12 @@ msgstr "刪除資產(&D)"
 #: src/assetspanel.cpp:108 src/billsdepositspanel.cpp:408
 #: src/mmcheckingpanel.cpp:1113 src/mmframe.cpp:1155 src/payeedialog.cpp:370
 #: src/stockspanel.cpp:148
-#, fuzzy
 msgid "&Organize Attachments"
-msgstr "管理受帳人"
+msgstr "管理附件(&O)"
 
 #: src/assetspanel.cpp:200
 msgid "Do you really want to delete the Asset?"
-msgstr "你是否確定刪除這資產?"
+msgstr "你是否確定刪除這項資產?"
 
 #: src/assetspanel.cpp:201
 msgid "Confirm Asset Deletion"
@@ -586,6 +573,8 @@ msgid ""
 "depreciate by a certain rate per year, or not change in value. The total "
 "assets are added to your total financial worth."
 msgstr ""
+"MMEX可以讓您追蹤固定資產像是:汽車, 房屋, 土地..等等。每項資產都可以有增值率, "
+"貶值率, 或是設為固定價值。所有資產的價值將會計入您的個人總值。"
 
 #: src/assetspanel.cpp:414 src/general_report_manager.cpp:671
 #: src/general_report_manager.cpp:946 src/mmframe.cpp:466 src/mmframe.cpp:711
@@ -602,24 +591,20 @@ msgstr "全部"
 
 #: src/assetspanel.cpp:467 src/billsdepositspanel.cpp:268
 #: src/mmcheckingpanel.cpp:464 src/stockspanel.cpp:569
-#, fuzzy
 msgid "&New "
-msgstr "新增"
+msgstr "新增(&N)"
 
 #: src/assetspanel.cpp:471 src/stockspanel.cpp:573
-#, fuzzy
 msgid "&Add Trans "
-msgstr "新增預算年度"
+msgstr "新增資產交易(&A)"
 
 #: src/assetspanel.cpp:476 src/stockspanel.cpp:578
-#, fuzzy
 msgid "&View Trans "
-msgstr "轉帳"
+msgstr "檢視資產交易(&V)"
 
 #: src/assetspanel.cpp:477
-#, fuzzy
 msgid "View Asset Transactions"
-msgstr "檢視所有交易"
+msgstr "檢視資產交易"
 
 #: src/assetspanel.cpp:481 src/attachmentdialog.cpp:287
 #: src/billsdepositspanel.cpp:272 src/categdialog.cpp:228
@@ -627,17 +612,15 @@ msgstr "檢視所有交易"
 #: src/maincurrencydialog.cpp:579 src/mmcheckingpanel.cpp:468
 #: src/payeedialog.cpp:364 src/splittransactionsdialog.cpp:164
 #: src/stockspanel.cpp:583
-#, fuzzy
 msgid "&Edit "
-msgstr "編輯"
+msgstr "編輯(&E)"
 
 #: src/assetspanel.cpp:486 src/billsdepositspanel.cpp:277
 #: src/budgetyeardialog.cpp:103 src/categdialog.cpp:232
 #: src/maincurrencydialog.cpp:283 src/mmcheckingpanel.cpp:473
 #: src/mmcheckingpanel.cpp:1129 src/stockdialog.cpp:330 src/stockspanel.cpp:588
-#, fuzzy
 msgid "&Delete "
-msgstr "刪除"
+msgstr "刪除(&D)"
 
 #: src/assetspanel.cpp:487
 msgid "Delete Asset"
@@ -645,19 +628,16 @@ msgstr "刪除資產"
 
 #: src/assetspanel.cpp:494 src/billsdepositspanel.cpp:295
 #: src/mmcheckingpanel.cpp:486 src/stockspanel.cpp:601
-#, fuzzy
 msgid "Open attachments"
-msgstr "開啟資料庫"
+msgstr "開啟附件"
 
 #: src/assetspanel.cpp:501 src/assetspanel.cpp:502 src/mmcheckingpanel.cpp:494
-#, fuzzy
 msgid "Search"
-msgstr "三月"
+msgstr "搜尋"
 
 #: src/assetspanel.cpp:504
-#, fuzzy
 msgid "Enter any string to find related assets"
-msgstr "請輸入資產名稱"
+msgstr "請輸入文字來搜尋相關資產"
 
 #: src/assetspanel.cpp:574 src/stockspanel.cpp:764 src/stockspanel.cpp:992
 #, c-format
@@ -665,9 +645,9 @@ msgid "Total: %s"
 msgstr "總計: %s"
 
 #: src/assetspanel.cpp:656
-#, fuzzy, c-format
+#, c-format
 msgid "Change in Value: %s %s"
-msgstr "更改值"
+msgstr "更改值 : %s %s"
 
 #: src/assetspanel.cpp:770
 msgid ""
@@ -675,16 +655,22 @@ msgid ""
 "\n"
 "Multiple transactions for this asset are not recommended."
 msgstr ""
+"這項資產沒有帳戶\n"
+"\n"
+"這項資產不建議多筆的交易"
 
 #: src/assetspanel.cpp:772
 msgid "Asset Management"
-msgstr ""
+msgstr "資產管理"
 
 #: src/assetspanel.cpp:791
 msgid ""
 "Account \t Date\t   Value\n"
 "\n"
 msgstr ""
+"帳號\t 日期\t  數值\n"
+"\n"
+"\n"
 
 #: src/attachmentdialog.cpp:54 src/customfieldlistdialog.cpp:54
 #: src/import_export/qif_import_gui.cpp:96
@@ -694,50 +680,47 @@ msgstr ""
 
 #: src/attachmentdialog.cpp:55 src/customfieldeditdialog.cpp:125
 #: src/customfieldlistdialog.cpp:55 src/general_report_manager.cpp:407
-#, fuzzy
 msgid "Description"
-msgstr "交易明細表"
+msgstr "敘述"
 
 #: src/attachmentdialog.cpp:56 src/import_export/qif_export.cpp:170
 #: src/import_export/univcsvdialog.cpp:158
-#, fuzzy
 msgid "File"
-msgstr "檔案(&F)"
+msgstr "檔案"
 
 #: src/attachmentdialog.cpp:64
 msgid "Attachment folder not defined."
-msgstr ""
+msgstr "未定義附件資料夾"
 
 #: src/attachmentdialog.cpp:65
 msgid "Please set it in Tools -> Options -> Attachments"
-msgstr ""
+msgstr "請設定 工具->選項->附件"
 
 #: src/attachmentdialog.cpp:66
 msgid "Attachment folder not defined"
-msgstr ""
+msgstr "未定義附件資料夾"
 
 #: src/attachmentdialog.cpp:70
-#, fuzzy
 msgid "Unable to find attachments folder:"
-msgstr "無法寫入檔案。"
+msgstr "無法發現附件資料夾"
 
 #: src/attachmentdialog.cpp:73
 msgid "Please verify that above path is correct"
-msgstr ""
+msgstr "請確認上面路徑是否正確"
 
 #: src/attachmentdialog.cpp:74
 msgid "Attachments folder not found"
-msgstr ""
+msgstr "無法發現附件資料夾"
 
 #: src/attachmentdialog.cpp:85
-#, fuzzy, c-format
+#, c-format
 msgid "Organize Attachments | %s %i"
-msgstr "管理受帳人"
+msgstr "管理附件| %s %i"
 
 #: src/attachmentdialog.cpp:87
-#, fuzzy, c-format
+#, c-format
 msgid "Organize Attachments | New %s"
-msgstr "管理受帳人"
+msgstr "管理附件 | 新增 %s"
 
 #: src/attachmentdialog.cpp:125 src/customfieldlistdialog.cpp:104
 #: src/payeedialog.cpp:115
@@ -751,54 +734,45 @@ msgid "Import attachment:"
 msgstr "匯入檔案"
 
 #: src/attachmentdialog.cpp:174
-#, fuzzy
 msgid "Enter a description for the new attachment:"
-msgstr "請輸入資產名稱"
+msgstr "請輸入新附件的敘述"
 
 #: src/attachmentdialog.cpp:175
-#, fuzzy
 msgid "Organize Attachments: Add Attachment"
-msgstr "管理受帳人"
+msgstr "管理附件 : 新增附件"
 
 #: src/attachmentdialog.cpp:216
-#, fuzzy
 msgid "Enter a new description for the attachment:"
-msgstr "請輸入資產名稱"
+msgstr "請輸入附件的新敘述"
 
 #: src/attachmentdialog.cpp:217
-#, fuzzy
 msgid "Organize Attachments: Edit Attachment"
-msgstr "管理受帳人"
+msgstr "管理附件 : 編輯附件"
 
 #: src/attachmentdialog.cpp:241
-#, fuzzy
 msgid "Do you really want to delete this attachment?"
-msgstr "你是否確定刪除這帳目？"
+msgstr "你是否確定刪除這個附件？"
 
 #: src/attachmentdialog.cpp:242
-#, fuzzy
 msgid "Confirm Attachment Deletion"
-msgstr "確定刪除帳目"
+msgstr "確定刪除附件"
 
 #: src/attachmentdialog.cpp:284 src/categdialog.cpp:224
 #: src/customfieldlistdialog.cpp:269 src/import_export/univcsvdialog.cpp:210
 #: src/maincurrencydialog.cpp:193 src/payeedialog.cpp:363
 #: src/splittransactionsdialog.cpp:163 src/stockdialog.cpp:332
-#, fuzzy
 msgid "&Add "
-msgstr "新增預算年度"
+msgstr "新增(&A)"
 
 #: src/attachmentdialog.cpp:286
-#, fuzzy
 msgid "&Open "
-msgstr "開啟檔案"
+msgstr "開啟(&O)"
 
 #: src/attachmentdialog.cpp:289 src/customfieldlistdialog.cpp:272
 #: src/import_export/univcsvdialog.cpp:214 src/maincurrencydialog.cpp:200
 #: src/payeedialog.cpp:366 src/splittransactionsdialog.cpp:165
-#, fuzzy
 msgid "&Remove "
-msgstr "移除"
+msgstr "移除(&R)"
 
 #: src/attachmentdialog.cpp:340
 msgid "Att."
@@ -808,70 +782,63 @@ msgstr ""
 msgid ""
 "This directory and its files are automatically managed by Money Manager EX "
 "software."
-msgstr ""
+msgstr "此資料夾以及裡面的檔案是被MMEX所自動管理"
 
 #: src/attachmentdialog.cpp:349
 msgid "Please do not remove, rename or modify manually directories and files."
-msgstr ""
+msgstr "請勿刪除, 更名, 修改 此資料夾以及檔案"
 
 #: src/attachmentdialog.cpp:383 src/attachmentdialog.cpp:391
-#, fuzzy
 msgid "Destination file already exist:"
-msgstr "預算年度已存在"
+msgstr "要儲存的檔案已存在 : "
 
 #: src/attachmentdialog.cpp:386
 msgid "File not found in attachments. Please delete or rename it."
-msgstr ""
+msgstr "無法發現檔案在附件中。請刪除或是更名。"
 
 #: src/attachmentdialog.cpp:387 src/attachmentdialog.cpp:395
-#, fuzzy
 msgid "Destination file already exist"
-msgstr "預算年度已存在"
+msgstr "要儲存的檔案已存在"
 
 #: src/attachmentdialog.cpp:394
 msgid "File already found in attachments"
-msgstr ""
+msgstr "已經在附件中找到檔案"
 
 #: src/attachmentdialog.cpp:437
 msgid "Attachment not found:"
-msgstr ""
+msgstr "找不到附件"
 
 #: src/attachmentdialog.cpp:440
-#, fuzzy
 msgid "Do you want to continue and delete attachment on database?"
-msgstr "你真的要刪除此系列？"
+msgstr "你真的要繼續並從資料庫中刪除附件？"
 
 #: src/attachmentdialog.cpp:441
 msgid "Delete attachment failed"
-msgstr ""
+msgstr "刪除附件失敗"
 
 #: src/attachmentdialog.cpp:454
-#, fuzzy
 msgid "Unable to open file:"
-msgstr "無法開啟檔案。"
+msgstr "無法開啟檔案 : "
 
 #: src/attachmentdialog.cpp:457
 msgid "Please verify that file exists and user has rights to read it."
-msgstr ""
+msgstr "請確認檔案存在並且使用者可以讀取"
 
 #: src/attachmentdialog.cpp:458
 msgid "Open attachment failed"
-msgstr ""
+msgstr "開啟附件失敗"
 
 #: src/billsdepositsdialog.cpp:111
-#, fuzzy
 msgid "New Recurring Transaction"
-msgstr "新增/編輯循環交易項目"
+msgstr "新增循環交易項目"
 
 #: src/billsdepositsdialog.cpp:131
-#, fuzzy
 msgid "Edit Recurring Transaction"
-msgstr "新增/編輯循環交易項目"
+msgstr "編輯循環交易項目"
 
 #: src/billsdepositsdialog.cpp:135
-#, fuzzy
 msgid "Enter Recurring Transaction"
-msgstr "循環交易項目"
+msgstr "輸入循環交易項目"
 
 #: src/billsdepositsdialog.cpp:313 src/billsdepositspanel.cpp:39
 #: src/filtertransdialog.cpp:43 src/model/Model_Asset.cpp:23
@@ -888,7 +855,7 @@ msgstr "每週"
 
 #: src/billsdepositsdialog.cpp:315 src/billsdepositspanel.cpp:41
 msgid "Fortnightly"
-msgstr ""
+msgstr "每雙周"
 
 #: src/billsdepositsdialog.cpp:316 src/billsdepositspanel.cpp:42
 #: src/mmframereport.cpp:158 src/mmframereport.cpp:171
@@ -932,39 +899,38 @@ msgstr "每日"
 #: src/billsdepositsdialog.cpp:324 src/billsdepositspanel.cpp:50
 #, c-format
 msgid "In %s Days"
-msgstr ""
+msgstr "在 %s 日中"
 
 #: src/billsdepositsdialog.cpp:325 src/billsdepositspanel.cpp:51
-#, fuzzy, c-format
+#, c-format
 msgid "In %s Months"
-msgstr "月"
+msgstr "在 %s 月中"
 
 #: src/billsdepositsdialog.cpp:326 src/billsdepositspanel.cpp:52
 #, c-format
 msgid "Every %s Days"
-msgstr ""
+msgstr "每 %s 天"
 
 #: src/billsdepositsdialog.cpp:327 src/billsdepositspanel.cpp:53
-#, fuzzy, c-format
+#, c-format
 msgid "Every %s Months"
-msgstr "月"
+msgstr "每 %s 月"
 
 #: src/billsdepositsdialog.cpp:328 src/billsdepositspanel.cpp:54
 msgid "Monthly (last day)"
-msgstr ""
+msgstr "每月(最後一天)"
 
 #: src/billsdepositsdialog.cpp:329 src/billsdepositspanel.cpp:55
 msgid "Monthly (last business day)"
-msgstr ""
+msgstr "每月(最後一個營業日)"
 
 #: src/billsdepositsdialog.cpp:340 src/transdialog.cpp:355
 msgid "Transaction Details"
 msgstr "交易細節"
 
 #: src/billsdepositsdialog.cpp:346
-#, fuzzy
 msgid "Transaction Dates"
-msgstr "交易細節"
+msgstr "交易日期"
 
 #: src/billsdepositsdialog.cpp:368
 #, fuzzy
@@ -978,12 +944,11 @@ msgstr "設定帳單或存款下一次的到期日"
 
 #: src/billsdepositsdialog.cpp:393
 msgid "Retard or advance the date of the 'next occurrence"
-msgstr ""
+msgstr "遞延 或是 提前 下一次的交易"
 
 #: src/billsdepositsdialog.cpp:399 src/billsdepositspanel.cpp:97
-#, fuzzy
 msgid "Date Due"
-msgstr "日期  "
+msgstr "截止日期  "
 
 #: src/billsdepositsdialog.cpp:403 src/billsdepositsdialog.cpp:1303
 msgid "Repeats"
@@ -991,50 +956,47 @@ msgstr "重複類型"
 
 #: src/billsdepositsdialog.cpp:416
 msgid "Next"
-msgstr ""
+msgstr "下一個"
 
 #: src/billsdepositsdialog.cpp:418
 msgid "Advance the next occuring date with the specified values"
-msgstr ""
+msgstr "設定下次交易的提早日期"
 
 #: src/billsdepositsdialog.cpp:426 src/billsdepositsdialog.cpp:1346
 msgid "Payments Left"
-msgstr ""
+msgstr "剩餘的款項"
 
 #: src/billsdepositsdialog.cpp:440
 msgid "Request user to enter payment on the 'Date Paid'"
-msgstr ""
+msgstr "需要使用者輸入付款在'附款截止日'"
 
 #: src/billsdepositsdialog.cpp:441
 msgid "User requested to enter this transaction on the 'Date Paid'"
-msgstr ""
+msgstr "使用者需要在'附款截止日' 輸入交易"
 
 #: src/billsdepositsdialog.cpp:444
 msgid "Grant automatic execute permission for this entry."
-msgstr ""
+msgstr "允許這個系列的自動執行"
 
 #: src/billsdepositsdialog.cpp:446
 msgid "The requested payment will occur without user interaction"
-msgstr ""
+msgstr "這項付款將會自動執行並不會出現使用介面"
 
 #: src/billsdepositsdialog.cpp:466
-#, fuzzy
 msgid "Specify the date the user is requested to enter this transaction"
-msgstr "選擇交易的類型"
+msgstr "定易提示使用者輸入這筆交易的日期"
 
 #: src/billsdepositsdialog.cpp:469
-#, fuzzy
 msgid "Advance or retard the user request date of this transaction"
-msgstr "設定交易的日期"
+msgstr "提早 或是 延後 提示使用這進行這筆交易的日期"
 
 #: src/billsdepositsdialog.cpp:474
 msgid "Reset 'Date Paid' to 'Today's Date'"
-msgstr ""
+msgstr "重設付款日期為今天的日期"
 
 #: src/billsdepositsdialog.cpp:481 src/billsdepositspanel.cpp:96
-#, fuzzy
 msgid "Date Paid"
-msgstr "日期  "
+msgstr "付款日期  "
 
 #: src/billsdepositsdialog.cpp:493 src/filtertransdialog.cpp:246
 #: src/transdialog.cpp:1176
@@ -1053,27 +1015,24 @@ msgstr "狀態"
 #: src/billsdepositsdialog.cpp:511 src/splitdetailsdialog.cpp:125
 #: src/transdialog.cpp:1177
 msgid "Specify the type of transactions to be created."
-msgstr "設定交易的類型"
+msgstr "設定要被建立的交易的類型"
 
 #: src/billsdepositsdialog.cpp:512 src/transdialog.cpp:405
-#, fuzzy
 msgid "&Advanced"
-msgstr "進階"
+msgstr "進階(&A)"
 
 #: src/billsdepositsdialog.cpp:515 src/transdialog.cpp:1181
-#, fuzzy
 msgid "Allows the setting of different amounts in the FROM and TO accounts."
-msgstr "選擇轉帳帳目"
+msgstr "允許設定不一樣的金額在這筆交易的 (來源) 以及 (目的) 帳戶"
 
 #: src/billsdepositsdialog.cpp:525 src/billsdepositsdialog.cpp:800
 #: src/transdialog.cpp:1165 src/usertransactionpanel.cpp:144
 msgid "Specify the amount for this transaction"
-msgstr "輸入交易的金額"
+msgstr "輸入交易的總額"
 
 #: src/billsdepositsdialog.cpp:526
-#, fuzzy
 msgid "Specify the amount to be transferred"
-msgstr "輸入交易的金額"
+msgstr "輸入轉帳的總額"
 
 #: src/billsdepositsdialog.cpp:528 src/billsdepositspanel.cpp:103
 #: src/budgetingpanel.cpp:309 src/mmhomepagepanel.cpp:387
@@ -1086,9 +1045,8 @@ msgid "Amount"
 msgstr "總額"
 
 #: src/billsdepositsdialog.cpp:540 src/transdialog.cpp:1161
-#, fuzzy
 msgid "Specify the transfer amount in the To Account"
-msgstr "選擇轉帳帳目"
+msgstr "選擇轉帳帳戶"
 
 #: src/billsdepositsdialog.cpp:552 src/billsdepositspanel.cpp:98
 #: src/filtertransdialog.cpp:174 src/import_export/qif_import_gui.cpp:97
@@ -1098,18 +1056,17 @@ msgstr "選擇轉帳帳目"
 #: src/transdialog.cpp:246 src/transdialog.cpp:435
 #: src/usertransactionpanel.cpp:110 src/webappdialog.cpp:79
 msgid "Account"
-msgstr "帳目"
+msgstr "帳戶"
 
 #: src/billsdepositsdialog.cpp:553 src/billsdepositsdialog.cpp:682
 #: src/billsdepositsdialog.cpp:714 src/billsdepositsdialog.cpp:764
 #: src/usertransactionpanel.cpp:111
 msgid "Select Account"
-msgstr "選擇帳目"
+msgstr "選擇帳戶"
 
 #: src/billsdepositsdialog.cpp:555
-#, fuzzy
 msgid "Specify the Account that will own the recurring transaction"
-msgstr "輸入交易的金額"
+msgstr "設定這比循環交易的帳戶"
 
 #: src/billsdepositsdialog.cpp:558 src/billsdepositsdialog.cpp:863
 #: src/billsdepositspanel.cpp:99 src/filtertransdialog.cpp:203
@@ -1175,109 +1132,96 @@ msgid "Number"
 msgstr "編號"
 
 #: src/billsdepositsdialog.cpp:601
-#, fuzzy
 msgid "Organize attachments of this recurring transaction"
-msgstr "輸入交易的金額"
+msgstr "管理這項循環交易的附件"
 
 #: src/billsdepositsdialog.cpp:605 src/transdialog.cpp:489
 #: src/usertransactionpanel.cpp:215
 msgid "Select one of the frequently used notes"
-msgstr ""
+msgstr "選擇一個常用的註解"
 
 #: src/billsdepositsdialog.cpp:615 src/transdialog.cpp:1180
 #: src/usertransactionpanel.cpp:224
 msgid "Specify any text notes you want to add to this transaction."
-msgstr "輸入關於這筆交易的註釋"
+msgstr "輸入關於這筆交易的註解"
 
 #: src/billsdepositsdialog.cpp:681
-#, fuzzy
 msgid "Choose Bank Account or Term Account"
-msgstr "選擇帳目"
+msgstr "選擇 銀行帳戶 或是 短期帳戶"
 
 #: src/billsdepositsdialog.cpp:714 src/billsdepositsdialog.cpp:764
-#, fuzzy
 msgid "Account name"
-msgstr "帳目名稱"
+msgstr "帳戶名稱"
 
 #: src/billsdepositsdialog.cpp:803
-#, fuzzy
 msgid "Specify which account the transfer is going to"
-msgstr "指定發生轉帳的帳目"
+msgstr "指定轉帳的目的帳目"
 
 #: src/billsdepositsdialog.cpp:806
 msgid "Specify to whom the transaction is going to or coming from "
-msgstr "指定交易的來源或目的"
+msgstr "指定交易的(來源)或(目的)帳戶"
 
 #: src/billsdepositsdialog.cpp:840 src/billsdepositsdialog.cpp:851
 #: src/billsdepositsdialog.cpp:874 src/transdialog.cpp:243
 #: src/transdialog.cpp:305
 msgid "From"
-msgstr "由"
+msgstr "來源(由)"
 
 #: src/billsdepositsdialog.cpp:850 src/transdialog.cpp:303
 msgid "To"
-msgstr "至"
+msgstr "目的(至)"
 
 #: src/billsdepositsdialog.cpp:852
 msgid "Select To Account"
 msgstr "選取存入帳目"
 
 #: src/billsdepositsdialog.cpp:875 src/transdialog.cpp:1170
-#, fuzzy
 msgid "Specify where the transaction is coming from"
-msgstr "選擇交易的對象"
+msgstr "選擇交易的來源"
 
 #: src/billsdepositsdialog.cpp:1254
-#, fuzzy
 msgid "Specify the transfer amount in the From Account"
-msgstr "選擇轉帳帳目"
+msgstr "輸入轉帳交易的來源帳戶金額"
 
 #: src/billsdepositsdialog.cpp:1304
-#, fuzzy
 msgid "Activates"
-msgstr "增值"
+msgstr "啟用"
 
 #: src/billsdepositsdialog.cpp:1306
 msgid "Period: Days"
-msgstr ""
+msgstr "周期 : 天數"
 
 #: src/billsdepositsdialog.cpp:1307
-#, fuzzy
 msgid "Period: Months"
-msgstr "每四個月"
+msgstr "周期 : 月數"
 
 #: src/billsdepositsdialog.cpp:1315
-#, fuzzy
 msgid "Specify period in Days to activate.Becomes blank when not active."
-msgstr "指定新建立帳目的類型。"
+msgstr "設定啟用的周期天數。當關閉後，會變為空白"
 
 #: src/billsdepositsdialog.cpp:1323
-#, fuzzy
 msgid ""
 "Specify period in Months to activate.\n"
 "Becomes blank when not active."
-msgstr "指定新建立帳目的類型。"
+msgstr "設定啟用的周期月數。當關閉後，會變為空白"
 
 #: src/billsdepositsdialog.cpp:1331
-#, fuzzy
 msgid ""
 "Specify period in Days to activate.\n"
 "Leave blank when not active."
-msgstr "指定新建立帳目的類型。"
+msgstr "設定啟用的周期天數。如果不啟用，設為空白"
 
 #: src/billsdepositsdialog.cpp:1339
-#, fuzzy
 msgid ""
 "Specify period in Months to activate.\n"
 "Leave blank when not active."
-msgstr "指定新建立帳目的類型。"
+msgstr "設定啟用的周期月數。如果不啟用，設為空白"
 
 #: src/billsdepositsdialog.cpp:1347
-#, fuzzy
 msgid ""
 "Specify the number of payments to be made.Leave blank if the payments "
 "continue forever."
-msgstr "設定重復的次數。如果永遠持續則保留空白"
+msgstr "設定付款重復的次數。如果永遠持續則保留空白"
 
 #: src/billsdepositsdialog.cpp:1446 src/transdialog.cpp:1138
 #: src/usertransactionpanel.cpp:190
@@ -1288,12 +1232,12 @@ msgstr "選擇交易的類型"
 #: src/import_export/qif_export.cpp:115 src/mmframereport.cpp:135
 #: src/reports/categexp.cpp:200 src/transdialog.cpp:318
 msgid "Categories"
-msgstr "依類別查看資金走向"
+msgstr "交易類型"
 
 #: src/billsdepositspanel.cpp:104 src/budgetingpanel.cpp:308
 #: src/reports/budgetcategorysummary.cpp:114
 msgid "Frequency"
-msgstr "重複類型"
+msgstr "頻率"
 
 #: src/billsdepositspanel.cpp:105
 #, fuzzy
@@ -1302,11 +1246,11 @@ msgstr "循環交易項目"
 
 #: src/billsdepositspanel.cpp:106
 msgid "Autorepeat"
-msgstr ""
+msgstr "自動重覆"
 
 #: src/billsdepositspanel.cpp:107 src/mmhomepagepanel.cpp:387
 msgid "Payment"
-msgstr ""
+msgstr "付款"
 
 #: src/billsdepositspanel.cpp:164
 msgid ""
@@ -1316,12 +1260,15 @@ msgid ""
 "about to occur, and appears on the Home Page 14 days before the transaction "
 "is due. "
 msgstr ""
+"MMEX讓使用者將周期性的付款設為交易。這些交易可以是周期性的存款，或是轉帳。這"
+"些交易可以變成一項提示使用者的事件，這些在14天內的交易提示會出現在程式主頁"
+"面。"
 
 #: src/billsdepositspanel.cpp:165
 msgid ""
 "Tip: These transactions can be set up to activate - allowing the user to "
 "adjust any values on the due date."
-msgstr ""
+msgstr "提示 : 這些交易可以被設為啟用-允許使用者調整到期日"
 
 #: src/billsdepositspanel.cpp:218 src/billsdepositspanel.cpp:882
 #: src/mmframe.cpp:715 src/mmhomepagepanel.cpp:429
@@ -1335,37 +1282,32 @@ msgid "Transaction Filter"
 msgstr "交易過濾"
 
 #: src/billsdepositspanel.cpp:269
-#, fuzzy
 msgid "New Bills & Deposit Series"
-msgstr "新增帳單和存款項目"
+msgstr "新增帳單和存款週期項目"
 
 #: src/billsdepositspanel.cpp:273
-#, fuzzy
 msgid "Edit Bills & Deposit Series"
-msgstr "編輯帳單和存款項目"
+msgstr "編輯帳單和存款系列"
 
 #: src/billsdepositspanel.cpp:278
-#, fuzzy
 msgid "Delete Bills & Deposit Series"
-msgstr "刪除帳單和存款項目"
+msgstr "刪除帳單和存款系列"
 
 #: src/billsdepositspanel.cpp:282
 msgid "En&ter"
-msgstr ""
+msgstr "輸入(&t)"
 
 #: src/billsdepositspanel.cpp:283
-#, fuzzy
 msgid "Enter Next Bills & Deposit Occurrence"
-msgstr "輸入帳單及收入發生"
+msgstr "輸入下一筆帳單及收入的發生"
 
 #: src/billsdepositspanel.cpp:287
 msgid "&Skip"
-msgstr ""
+msgstr "略過(&S)"
 
 #: src/billsdepositspanel.cpp:288
-#, fuzzy
 msgid "Skip Next Bills & Deposit Occurrence"
-msgstr "輸入帳單及收入發生"
+msgstr "略過下一個帳單及收入發生"
 
 #: src/billsdepositspanel.cpp:400
 #, fuzzy
@@ -1373,9 +1315,8 @@ msgid "Enter next Occurrence..."
 msgstr "輸入下次交易"
 
 #: src/billsdepositspanel.cpp:402
-#, fuzzy
 msgid "Skip next Occurrence"
-msgstr "下次到期日"
+msgstr "略過下次交易"
 
 #: src/billsdepositspanel.cpp:404
 #, fuzzy
@@ -1393,41 +1334,39 @@ msgid "&Delete Bills && Deposit Series..."
 msgstr "刪除帳單和存款系列(&D)"
 
 #: src/billsdepositspanel.cpp:453
-#, fuzzy
 msgid "Manual"
-msgstr "一月"
+msgstr "手動"
 
 #: src/billsdepositspanel.cpp:457
 msgid "Suggested"
-msgstr ""
+msgstr "建議"
 
 #: src/billsdepositspanel.cpp:461
-#, fuzzy
 msgid "Automated"
-msgstr "估計"
+msgstr "自動"
 
 #: src/billsdepositspanel.cpp:503 src/billsdepositspanel.cpp:569
 #: src/mmhomepagepanel.cpp:350
-#, fuzzy, c-format
+#, c-format
 msgid "%d days remaining"
-msgstr "日 - 到期"
+msgstr "%d 日 - 剩餘天數"
 
 #: src/billsdepositspanel.cpp:508 src/billsdepositspanel.cpp:515
 #: src/billsdepositspanel.cpp:522 src/billsdepositspanel.cpp:574
 #: src/billsdepositspanel.cpp:581 src/billsdepositspanel.cpp:585
 msgid "Inactive"
-msgstr ""
+msgstr "未啟用"
 
 #: src/billsdepositspanel.cpp:513 src/mmhomepagepanel.cpp:351
 #, c-format
 msgid "%d days delay!"
-msgstr ""
+msgstr "%d 日 - 延後天數"
 
 #: src/billsdepositspanel.cpp:520 src/billsdepositspanel.cpp:579
 #: src/mmhomepagepanel.cpp:353
-#, fuzzy, c-format
+#, c-format
 msgid "%d days overdue!"
-msgstr "日 - 過期"
+msgstr "%d 日 - 過期天數"
 
 #: src/billsdepositspanel.cpp:631
 msgid "Do you really want to delete the series?"
@@ -1481,7 +1420,7 @@ msgstr "指定此類型是收入類型或是支出類型"
 
 #: src/budgetentrydialog.cpp:135
 msgid "Frequency:"
-msgstr "預算類型 :"
+msgstr "頻率 :"
 
 #: src/budgetentrydialog.cpp:140
 msgid "Specify the frequency of the expense or deposit"
@@ -1504,9 +1443,8 @@ msgid "View Non-Zero Budget Categories"
 msgstr "檢視非零值預算"
 
 #: src/budgetingpanel.cpp:54
-#, fuzzy
 msgid "View Planned Budget Categories"
-msgstr "檢視所有類型預算"
+msgstr "檢視所有已規畫類型預算"
 
 #: src/budgetingpanel.cpp:55
 msgid "View Income Budget Categories"
@@ -1522,24 +1460,24 @@ msgid "View Budget Category Summary"
 msgstr "檢視所有類型預算"
 
 #: src/budgetingpanel.cpp:179 src/reports/budget.cpp:83
-#, fuzzy, c-format
+#, c-format
 msgid "Financial Year: %s - %i"
-msgstr "上年"
+msgstr "會計年度 : %s - %i"
 
 #: src/budgetingpanel.cpp:183 src/reports/budget.cpp:87
-#, fuzzy, c-format
+#, c-format
 msgid "Year: %s"
-msgstr "每年"
+msgstr "年 : %s"
 
 #: src/budgetingpanel.cpp:188 src/reports/budget.cpp:92
-#, fuzzy, c-format
+#, c-format
 msgid "Month: %s"
-msgstr "月"
+msgstr "月 : %s"
 
 #: src/budgetingpanel.cpp:190
-#, fuzzy, c-format
+#, c-format
 msgid "Budget Setup for %s"
-msgstr "預算年:"
+msgstr "設定預算 : %s"
 
 #: src/budgetingpanel.cpp:255
 #, fuzzy
@@ -1568,7 +1506,7 @@ msgstr "支出:"
 
 #: src/budgetingpanel.cpp:305
 msgid "Icon"
-msgstr ""
+msgstr "圖示"
 
 #: src/budgetingpanel.cpp:307
 msgid "Sub Category"
@@ -1585,43 +1523,36 @@ msgid "Actual"
 msgstr "實際"
 
 #: src/budgetyeardialog.cpp:46
-#, fuzzy
 msgid "Budget Editor"
-msgstr "預算年度編輯器"
+msgstr "預算編輯器"
 
 #: src/budgetyeardialog.cpp:93
-#, fuzzy
 msgid "&Add Year"
-msgstr "新增預算年度"
+msgstr "新增年度(&A)"
 
 #: src/budgetyeardialog.cpp:95
 msgid "Add a new budget year"
 msgstr "新增預算年度"
 
 #: src/budgetyeardialog.cpp:98
-#, fuzzy
 msgid "&Add Month"
-msgstr "月"
+msgstr "新增月(&A)"
 
 #: src/budgetyeardialog.cpp:100
-#, fuzzy
 msgid "Add a new budget month"
-msgstr "新增預算年度"
+msgstr "新增預算月份"
 
 #: src/budgetyeardialog.cpp:105
-#, fuzzy
 msgid "Delete existing budget"
-msgstr "刪除預算年度"
+msgstr "刪除現有預算"
 
 #: src/budgetyearentrydialog.cpp:42 src/budgetyearentrydialog.cpp:151
-#, fuzzy
 msgid "Budget Entry Details"
-msgstr "編輯預算"
+msgstr "輸入預算細節"
 
 #: src/budgetyearentrydialog.cpp:44
-#, fuzzy
 msgid "Budget Month Entry"
-msgstr "輸入預算年度"
+msgstr "輸入預算月份"
 
 #: src/budgetyearentrydialog.cpp:71
 msgid "Budget Year:"
@@ -1632,21 +1563,24 @@ msgid ""
 "Specify the required year.\n"
 "Use Spin buttons to increase or decrease the year."
 msgstr ""
+"設定所要的年份\n"
+"使用按扭去增加或減少年份"
 
 #: src/budgetyearentrydialog.cpp:85
-#, fuzzy
 msgid "Budget Month:"
-msgstr "本月"
+msgstr "預算月份 : "
 
 #: src/budgetyearentrydialog.cpp:94
 msgid ""
 "Specify the required month.\n"
 "Use Spin buttons to increase or decrease the month."
 msgstr ""
+"設定所要的月份\n"
+"使用按扭去增加或減少月份"
 
 #: src/budgetyearentrydialog.cpp:101
 msgid "Base Budget On:"
-msgstr "基礎預算年:"
+msgstr "基礎預算:"
 
 #: src/budgetyearentrydialog.cpp:111
 msgid "Specify year to base budget on."
@@ -1662,7 +1596,7 @@ msgstr "管理類型"
 
 #: src/categdialog.cpp:187 src/mmframe.cpp:1486
 msgid "Reassign all categories to another category"
-msgstr ""
+msgstr "重新設定整個類型為另外一個類型"
 
 #: src/categdialog.cpp:189
 #, fuzzy
@@ -1671,12 +1605,11 @@ msgstr "支出"
 
 #: src/categdialog.cpp:194 src/maincurrencydialog.cpp:161
 msgid "Show All"
-msgstr ""
+msgstr "展示全部"
 
 #: src/categdialog.cpp:196
-#, fuzzy
 msgid "Show all hidden categories"
-msgstr "檢視所有類型預算"
+msgstr "展示所有隱藏的類型"
 
 #: src/categdialog.cpp:226
 msgid "Add a new category"
@@ -1684,7 +1617,7 @@ msgstr "新增類型"
 
 #: src/categdialog.cpp:230
 msgid "Edit the name of an existing category"
-msgstr "編輯已存在類型"
+msgstr "編輯已存在類型的名稱"
 
 #: src/categdialog.cpp:234
 msgid ""
@@ -1693,9 +1626,8 @@ msgid ""
 msgstr "刪除已存在類型。此類型不可以用在已存在的交易上。"
 
 #: src/categdialog.cpp:239 src/maincurrencydialog.cpp:207
-#, fuzzy
 msgid "&Select"
-msgstr "選取"
+msgstr "選取(&S)"
 
 #: src/categdialog.cpp:241
 msgid ""
@@ -1704,18 +1636,16 @@ msgid ""
 msgstr "選擇目前所選類型為此交易之類型"
 
 #: src/categdialog.cpp:250
-#, fuzzy
 msgid "Enter the name for the new category:"
-msgstr "請輸入資產名稱"
+msgstr "請輸入新類型的名稱"
 
 #: src/categdialog.cpp:253
 msgid "Tip: If category added now, check bottom of list."
-msgstr ""
+msgstr "提示 : 如果類型已經新增了，檢查整個列表的最尾端"
 
 #: src/categdialog.cpp:256
-#, fuzzy
 msgid "Add Category"
-msgstr "類型"
+msgstr "新增類型"
 
 #: src/categdialog.cpp:265 src/categdialog.cpp:473
 msgid "Category with same name exists"
@@ -1726,11 +1656,12 @@ msgid ""
 "Tip: If category added now, check bottom of list.\n"
 "Category will be in sorted order next time dialog appears"
 msgstr ""
+"提示 : 如果類型已經新增了，檢查整個列表的最尾端\n"
+"整個類別的列表會在下次重新依名稱排序"
 
 #: src/categdialog.cpp:268 src/categdialog.cpp:292 src/categdialog.cpp:310
-#, fuzzy
 msgid "Organise Categories: Adding Error"
-msgstr "管理類型"
+msgstr "管理類型 : 新增錯誤"
 
 #: src/categdialog.cpp:291 src/categdialog.cpp:490
 msgid "Sub Category with same name exists"
@@ -1738,7 +1669,7 @@ msgstr "副類型名稱已存在"
 
 #: src/categdialog.cpp:309
 msgid "Invalid Parent Category. Choose Root or Main Category node."
-msgstr "無效的主類型。選擇主類型節點。"
+msgstr "無效的主類型。請選擇整個列表的根目錄或是主類型節點。"
 
 #: src/categdialog.cpp:316
 #, fuzzy
@@ -1755,21 +1686,23 @@ msgid ""
 "Tip: Change all transactions using this Category to\n"
 "another Category using the relocate command:"
 msgstr ""
+"提示 : 如果需要修改所有交易的類別成為另外一個類別，建議使用(更改位置 -> 類別)"
 
 #: src/categdialog.cpp:321
 msgid ""
 "Tip: Change all transactions using this Sub-Category to\n"
 "another Sub-Category using the relocate command:"
 msgstr ""
+"提示 : 如果需要修改所有交易的子類別成為另外一個子類別，建議使用(更改位置 -> "
+"類別)"
 
 #: src/categdialog.cpp:324
 msgid "Tools -> Relocation of -> Categories"
-msgstr ""
+msgstr "工具 -> 更改位置 -> 類別"
 
 #: src/categdialog.cpp:326
-#, fuzzy
 msgid "Organise Categories: Delete Error"
-msgstr "管理類型"
+msgstr "管理類型 : 刪除錯誤"
 
 #: src/categdialog.cpp:459
 #, fuzzy, c-format
