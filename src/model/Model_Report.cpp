@@ -25,6 +25,7 @@
 #include "model/Model_Setting.h"
 #include "LuaGlue/LuaGlue.h"
 #include "sqlite3.h"
+#include "mmreportspanel.h"
 
 #if defined (__WXMSW__)
     #include <wx/msw/registry.h>
@@ -148,6 +149,82 @@ wxArrayString Model_Report::allGroupNames()
     return groups;
 }
 
+bool Model_Report::PrepareSQL(wxString& sql)
+{
+    sql.Trim();
+    if (sql.empty()) return false;
+    if (sql.Last() != ';') sql += ';';
+
+    size_t pos = sql.Lower().Find("&begin_date");
+    size_t len = wxString("&begin_date").size();
+
+    if (pos != wxNOT_FOUND)
+    {
+        wxDatePickerCtrl* start_date = (wxDatePickerCtrl*)
+            wxWindow::FindWindowById(mmReportsPanel::RepPanel::ID_CHOICE_START_DATE);
+        const auto data = start_date ? start_date->GetValue().FormatISODate()
+            : wxDateTime::Today().FormatISODate();
+
+        while (pos != wxNOT_FOUND)
+        {
+            sql.replace(pos, len, data);
+            pos = sql.Lower().Find("&begin_date");
+        }
+    }
+
+    pos = sql.Lower().Find("&single_date");
+    len = wxString("&single_date").size();
+    if (pos != wxNOT_FOUND)
+    {
+        wxDatePickerCtrl* start_date = (wxDatePickerCtrl*)
+            wxWindow::FindWindowById(mmReportsPanel::RepPanel::ID_CHOICE_START_DATE);
+        const auto data = start_date ? start_date->GetValue().FormatISODate()
+            : wxDateTime::Today().FormatISODate();
+
+        while (pos != wxNOT_FOUND)
+        {
+            sql.replace(pos, len, data);
+            pos = sql.Lower().Find("&single_date");
+        }
+    }
+
+    pos = sql.Lower().Find("&end_date");
+    len = wxString("&end_date").size();
+    
+    if (pos != wxNOT_FOUND)
+    {
+        wxDatePickerCtrl* end_date = (wxDatePickerCtrl*)
+            wxWindow::FindWindowById(mmReportsPanel::RepPanel::ID_CHOICE_END_DATE);
+        const auto data = end_date ? end_date->GetValue().FormatISODate()
+            : wxDateTime::Today().FormatISODate();
+
+        while (pos != wxNOT_FOUND)
+        {
+            sql.replace(pos, len, data);
+            pos = sql.Lower().Find("&end_date");
+        }
+    }
+
+    pos = sql.Lower().Find("&only_years");
+    len = wxString("&only_years").size();
+    if (pos != wxNOT_FOUND)
+    {
+        wxChoice* years = (wxChoice*)
+            wxWindow::FindWindowById(mmReportsPanel::RepPanel::ID_CHOICE_DATE_RANGE);
+        const auto data = years ? years->GetStringSelection()
+            : wxString::Format("%s", wxDate::Today().GetYear());
+
+        while (pos != wxNOT_FOUND)
+        {
+            sql.replace(pos, len, data);
+            pos = sql.Lower().Find("&only_years");
+        }
+    }
+
+    //TODO: other parameters
+    return true;
+}
+
 wxString Model_Report::get_html(const Data* r)
 {
     mm_html_template report(r->TEMPLATECONTENT);
@@ -163,8 +240,8 @@ wxString Model_Report::get_html(const Data* r)
     try
     {
         wxString sql = r->SQLCONTENT;
-        sql.Trim();
-        if (!sql.empty() && sql.Last() != ';') sql += ';';
+        PrepareSQL(sql);
+
         wxSQLite3Statement stmt = this->db_->PrepareStatement(sql);
         if (!stmt.IsReadOnly())
         {
@@ -360,7 +437,9 @@ bool Model_Report::outputReportFile(const wxString& str, const wxString& name)
         index_output.Close();
     }
     else
+    {
         ok = false;
+    }
     return ok;
 }
 

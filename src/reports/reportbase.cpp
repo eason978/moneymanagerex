@@ -1,5 +1,6 @@
 /*******************************************************
  Copyright (C) 2013,2017 James Higley
+ Copyright (C) 2017 Nikolay Akimov
 
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -57,7 +58,7 @@ mmPrintableBase::~mmPrintableBase()
         o2[L"NAMECOUNT"] = json::Number(static_cast<double>(count));
         for (size_t i = 0; i < count; i++)
         {
-            wxString name = wxString::Format("NAME%d", i);
+            const auto name = wxString::Format("NAME%zu", i);
             o2[name.ToStdWstring()] = json::String(accountArray_->Item(i).ToStdWstring());
         }
         std::wstringstream ss2;
@@ -171,7 +172,7 @@ void mmPrintableBase::setSettings(const wxString& settings)
         wxArrayString* accountSelections = new wxArrayString();
         for (size_t i = 0; i < count; i++)
         {
-            wxString name = wxString::Format("NAME%d", i);
+            const auto name = wxString::Format("NAME%zu", i);
             accountSelections->Add(wxString(json::String(o2[name.ToStdWstring()])));
         }
         accountArray_ = accountSelections;
@@ -212,6 +213,21 @@ wxString mmGeneralReport::getHTMLText()
     return Model_Report::instance().get_html(this->m_report);
 }
 
+int mmGeneralReport::report_parameters()
+{
+    int params = 0;
+    const auto content = this->m_report->SQLCONTENT.Lower();
+    if (content.Contains("&begin_date")
+        || content.Contains("&end_date"))
+        params |= RepParams::DATE_RANGE;
+    else if (content.Contains("&single_date"))
+        params |= RepParams::SINGLE_DATE;
+    else if (content.Contains("&only_years"))
+        params |= RepParams::ONLY_YEARS;
+
+    return params;
+}
+
 mm_html_template::mm_html_template(const wxString& arg_template): html_template(arg_template.ToStdWstring())
 {
     this->load_context();
@@ -219,7 +235,8 @@ mm_html_template::mm_html_template(const wxString& arg_template): html_template(
 
 void mm_html_template::load_context()
 {
-    (*this)(L"TODAY") = wxDate::Now().FormatISODate();
+    (*this)(L"TODAY") = wxDate::Today().FormatISODate() 
+        + " " + wxDate::Now().FormatISOTime();
     for (const auto &r: Model_Infotable::instance().all())
         (*this)(r.INFONAME.ToStdWstring()) = r.INFOVALUE;
     (*this)(L"INFOTABLE") = Model_Infotable::to_loop_t();
