@@ -13,11 +13,14 @@ Platforms
 ---------
 
 [![AppVeyor](https://img.shields.io/appveyor/ci/guanlisheng/moneymanagerex/master.svg?label=Windows)](https://ci.appveyor.com/project/guanlisheng/moneymanagerex)
-[![Travis](https://img.shields.io/travis/moneymanagerex/moneymanagerex/master.svg?label=OSX)](http://travis-ci.org/moneymanagerex/moneymanagerex)
+[![Travis](https://img.shields.io/travis/moneymanagerex/moneymanagerex/master.svg?label=Linux/macOS)](http://travis-ci.org/moneymanagerex/moneymanagerex)
 [![Ohloh](http://www.ohloh.net/p/moneymanagerex/widgets/project_thin_badge.gif)](https://www.ohloh.net/p/moneymanagerex)
 [![Download Money Manager Ex From Sourceforge](https://img.shields.io/sourceforge/dm/moneymanagerex.svg?label=Sourceforge)](https://sourceforge.net/projects/moneymanagerex/files/latest/download)
 ![Github All Releases](https://img.shields.io/github/downloads/moneymanagerex/moneymanagerex/total.svg?label=GithubAllReleases)
 ![Github latest Release](https://img.shields.io/github/downloads/moneymanagerex/moneymanagerex/latest/total.svg?label=GithubLatestRelease)
+<a href="https://packagecloud.io/moneymanagerex/moneymanagerex" title="DEB, RPM Repository | packagecloud">
+	<img alt="Private Maven, RPM, DEB, PyPi and RubyGem Repository | packagecloud" height="24" src="https://packagecloud.io/images/packagecloud-badge.png" width="82" />
+</a>
 
 
 ### MMEX is mainly written in C++11 and built on:
@@ -37,7 +40,7 @@ Platforms
 * https://hub.docker.com/r/moneymanagerex/moneymanagerex/
 
 #### Public links:
-* [Slack](http://moneymanagerex.slack.com)
+* [Slack](https://moneymanagerex-slackin.herokuapp.com)
 * [Forum](http://forum.moneymanagerex.org)
 * [Wiki](https://sourceforge.net/p/moneymanagerex/wiki/mmex)
 * [Facebook](https://www.facebook.com/MoneyManagerEx)
