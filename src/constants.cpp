@@ -111,18 +111,24 @@ const wxString mmex::getProgramDescription()
         << L" \u2b25 " << LUA_RELEASE << "\n\n"
 
         << wxString::Format(_("Build on %s %s with:"), __DATE__, __TIME__) << "\n"
+        << L" \u2b25 " << CMAKE_VERSION << "\n"
+        << L" \u2b25 " << MAKE_VERSION << "\n"
+        << L" \u2b25 " << GETTEXT_VERSION << "\n"
 #if defined(_MSC_VER)
-        << L" \u2b25 Microsoft Visual Studio " << _MSC_VER << "\n"
+#ifdef VS_VERSION
+        << L" \u2b25 Microsoft Visual Studio " << VS_VERSION << "\n"
+#endif
+        << L" \u2b25 Microsoft Visual C++ " << CXX_VERSION << "\n"
 #elif defined(__clang__)
-        << L" \u2b25 Clang/LLVM " << __VERSION__ << "\n"
+        << L" \u2b25 Clang " << __VERSION__ << "\n"
 #elif (defined(__GNUC__) || defined(__GNUG__)) && !(defined(__clang__) || defined(__INTEL_COMPILER))
-        << L" \u2b25 GNU GCC/G++ " << __VERSION__ << "\n"
+        << L" \u2b25 GCC " << __VERSION__ << "\n"
 #endif
-#ifdef CMAKE_VERSION
-        << L" \u2b25 CMake " CMAKE_VERSION << "\n"
+#ifdef CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION
+        << L" \u2b25 " << CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION << "\n"
 #endif
-#ifdef MAKE_VERSION
-        << L" \u2b25 GNU Make " MAKE_VERSION << "\n"
+#ifdef LINUX_DISTRO_STRING
+        << L" \u2b25 " << LINUX_DISTRO_STRING << "\n"
 #endif
 
         << "\n" << _("Running on:") << "\n"
@@ -130,12 +136,11 @@ const wxString mmex::getProgramDescription()
         << L" \u2b25 " << wxGetLinuxDistributionInfo().Description
         << " \"" << wxGetLinuxDistributionInfo().CodeName << "\"\n"
 #endif
-        << L" \u2b25 " << wxGetOsDescription()
-        << " " << wxPlatformInfo::Get().GetEndiannessName() << "\n"
+        << L" \u2b25 " << wxGetOsDescription() << "\n"
         << L" \u2b25 " << wxPlatformInfo::Get().GetDesktopEnvironment()
         << " " << wxLocale::GetLanguageName(wxLocale::GetSystemLanguage())
-        << " " << wxLocale::GetSystemEncodingName() 
-        << wxString::Format(L"\n \u2b25 %ix%ix%ibit %ix%ippi\n",
+        << " (" << wxLocale::GetSystemEncodingName() << ")\n"
+        << wxString::Format(L" \u2b25 %ix%ix%ibit %ix%ippi\n",
             wxGetDisplaySize().GetX(),
             wxGetDisplaySize().GetY(),
             wxDisplayDepth(),

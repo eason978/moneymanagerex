@@ -1,5 +1,6 @@
 /*******************************************************
  Copyright (C) 2006 Madhan Kanagavel
+ Copyright (C) 2016 - 2017 Stefano Giorgio [stef145g]
  Copyright (C) 2017 James Higley
 
  This program is free software; you can redistribute it and/or modify
@@ -45,8 +46,10 @@ public:
     wxString DateFormat();
 
     // set and save the option: m_language
-    void Language(wxString& language);
-    wxString Language(bool get_db = false);
+    void Language(wxLanguage& language);
+    wxLanguage Language(bool get_db = false);
+    // get 2-letter ISO 639-1 code
+    wxString LanguageISO6391(bool get_db = false);
 
     // set and save the option: m_userNameString
     void UserName(const wxString& username);
@@ -106,6 +109,12 @@ public:
     void HtmlFontSize(int value);
     int HtmlFontSize();
 
+    // Allows a year or financial year to start before or after the 1st of the month.
+    void BudgetDaysOffset(int value);
+    int BudgetDaysOffset();
+    /**Re-adjust date by the date offset value*/
+    void BudgetDateOffset(wxDateTime& date);
+
     void IconSize(int value);
     int IconSize();
 
@@ -122,7 +131,7 @@ public:
 
 private:
     wxString m_dateFormat;
-    wxString m_language;
+    wxLanguage m_language;
     wxString m_userNameString;
     wxString m_financialYearStartDayString;
     wxString m_financialYearStartMonthString;
@@ -144,7 +153,7 @@ private:
 
     int m_html_font_size;
     int m_ico_size;
-
+    int m_budget_days_offset;
     int m_hideReport;
     wxArrayPtrVoid m_reports;
 

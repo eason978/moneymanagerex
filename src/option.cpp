@@ -1,5 +1,6 @@
 /*******************************************************
  Copyright (C) 2006 Madhan Kanagavel
+ Copyright (C) 2016 - 2017 Stefano Giorgio [stef145g]
  Copyright (C) 2017 James Higley
 
  This program is free software; you can redistribute it and/or modify
@@ -86,7 +87,7 @@ int ReportCompare(_wxArraywxArrayPtrVoid *first, _wxArraywxArrayPtrVoid *second)
 //----------------------------------------------------------------------------
 Option::Option()
 :   m_dateFormat(mmex::DEFDATEFORMAT)
-    , m_language("english")
+    , m_language(wxLANGUAGE_UNKNOWN)
     , m_databaseUpdated(false)
     , m_budgetFinancialYears(false)
     , m_budgetIncludeTransfers(false)
@@ -103,23 +104,23 @@ Option::Option()
     , m_ico_size(16)
     , m_hideReport(0)
 {
-    m_reports.Add(new ReportInfo("", _("My Usage"), false, ReportInfo::MyUsage));
-    m_reports.Add(new ReportInfo(_("Summary of Accounts"), _("Monthly"), false, ReportInfo::MonthlySummaryofAccounts));
-    m_reports.Add(new ReportInfo(_("Summary of Accounts"), _("Yearly"), false, ReportInfo::YearlySummaryofAccounts));
-    m_reports.Add(new ReportInfo(_("Categories"), _("Where the Money Goes"), false, ReportInfo::WheretheMoneyGoes));
-    m_reports.Add(new ReportInfo(_("Categories"), _("Where the Money Comes From"), false, ReportInfo::WheretheMoneyComesFrom));
-    m_reports.Add(new ReportInfo(_("Categories"), _("Summary"), false, ReportInfo::CategoriesSummary));
-    m_reports.Add(new ReportInfo(_("Categories"), _("Monthly"), false, ReportInfo::CategoriesMonthly));
-    m_reports.Add(new ReportInfo("", _("Payees"), false, ReportInfo::Payees));
-    m_reports.Add(new ReportInfo(_("Income vs Expenses"), _("Summary"), false, ReportInfo::IncomevsExpensesSummary));
-    m_reports.Add(new ReportInfo(_("Income vs Expenses"), _("Monthly"), false, ReportInfo::IncomevsExpensesMonthly));
-    m_reports.Add(new ReportInfo(_("Budget"), _("Performance"), true, ReportInfo::BudgetPerformance));
-    m_reports.Add(new ReportInfo(_("Budget"), _("Category Summary"), true, ReportInfo::BudgetCategorySummary));
-    m_reports.Add(new ReportInfo(_("Cash Flow"), _("Monthly"), false, ReportInfo::MonthlyCashFlow));
-    m_reports.Add(new ReportInfo(_("Cash Flow"), _("Daily"), false, ReportInfo::DailyCashFlow));
-    m_reports.Add(new ReportInfo(_("Stocks Report"), _("Performance"), false, ReportInfo::StocksReportPerformance));
-    m_reports.Add(new ReportInfo(_("Stocks Report"), _("Summary"), false, ReportInfo::StocksReportSummary));
-    m_reports.Add(new ReportInfo("", _("Forecast Report"), false, ReportInfo::ForecastReport));
+    m_reports.Add(new ReportInfo("", wxTRANSLATE("My Usage"), false, ReportInfo::MyUsage));
+    m_reports.Add(new ReportInfo(wxTRANSLATE("Summary of Accounts"), wxTRANSLATE("Monthly"), false, ReportInfo::MonthlySummaryofAccounts));
+    m_reports.Add(new ReportInfo(wxTRANSLATE("Summary of Accounts"), wxTRANSLATE("Yearly"), false, ReportInfo::YearlySummaryofAccounts));
+    m_reports.Add(new ReportInfo(wxTRANSLATE("Categories"), wxTRANSLATE("Where the Money Goes"), false, ReportInfo::WheretheMoneyGoes));
+    m_reports.Add(new ReportInfo(wxTRANSLATE("Categories"), wxTRANSLATE("Where the Money Comes From"), false, ReportInfo::WheretheMoneyComesFrom));
+    m_reports.Add(new ReportInfo(wxTRANSLATE("Categories"), wxTRANSLATE("Summary"), false, ReportInfo::CategoriesSummary));
+    m_reports.Add(new ReportInfo(wxTRANSLATE("Categories"), wxTRANSLATE("Monthly"), false, ReportInfo::CategoriesMonthly));
+    m_reports.Add(new ReportInfo("", wxTRANSLATE("Payees"), false, ReportInfo::Payees));
+    m_reports.Add(new ReportInfo(wxTRANSLATE("Income vs Expenses"), wxTRANSLATE("Summary"), false, ReportInfo::IncomevsExpensesSummary));
+    m_reports.Add(new ReportInfo(wxTRANSLATE("Income vs Expenses"), wxTRANSLATE("Monthly"), false, ReportInfo::IncomevsExpensesMonthly));
+    m_reports.Add(new ReportInfo(wxTRANSLATE("Budget"), wxTRANSLATE("Performance"), true, ReportInfo::BudgetPerformance));
+    m_reports.Add(new ReportInfo(wxTRANSLATE("Budget"), wxTRANSLATE("Category Summary"), true, ReportInfo::BudgetCategorySummary));
+    m_reports.Add(new ReportInfo(wxTRANSLATE("Cash Flow"), wxTRANSLATE("Monthly"), false, ReportInfo::MonthlyCashFlow));
+    m_reports.Add(new ReportInfo(wxTRANSLATE("Cash Flow"), wxTRANSLATE("Daily"), false, ReportInfo::DailyCashFlow));
+    m_reports.Add(new ReportInfo(wxTRANSLATE("Stocks Report"), wxTRANSLATE("Performance"), false, ReportInfo::StocksReportPerformance));
+    m_reports.Add(new ReportInfo(wxTRANSLATE("Stocks Report"), wxTRANSLATE("Summary"), false, ReportInfo::StocksReportSummary));
+    m_reports.Add(new ReportInfo("", wxTRANSLATE("Forecast Report"), false, ReportInfo::ForecastReport));
     //Sort by group name and report name
     m_reports.Sort(ReportCompare);
 }
@@ -148,6 +149,7 @@ void Option::LoadOptions(bool include_infotable)
         m_userNameString = Model_Infotable::instance().GetStringInfo("USERNAME", "");
         m_financialYearStartDayString = Model_Infotable::instance().GetStringInfo("FINANCIAL_YEAR_START_DAY", "1");
         m_financialYearStartMonthString = Model_Infotable::instance().GetStringInfo("FINANCIAL_YEAR_START_MONTH", "7");
+        m_budget_days_offset = Model_Infotable::instance().GetIntInfo("BUDGET_DAYS_OFFSET", 0);
         m_sharePrecision = Model_Infotable::instance().GetIntInfo("SHARE_PRECISION", 4);
         m_baseCurrency = Model_Infotable::instance().GetIntInfo("BASECURRENCYID", -1);
         // Ensure that base currency is set for the database.
@@ -162,7 +164,7 @@ void Option::LoadOptions(bool include_infotable)
         }
     }
 
-    m_language = Model_Setting::instance().GetStringSetting(LANGUAGE_PARAMETER, "english");
+    m_language = static_cast<wxLanguage>(Model_Setting::instance().GetIntSetting(LANGUAGE_PARAMETER, wxLANGUAGE_UNKNOWN));
 
     m_budgetFinancialYears = Model_Setting::instance().GetBoolSetting(INIDB_BUDGET_FINANCIAL_YEARS, false);
     m_budgetIncludeTransfers = Model_Setting::instance().GetBoolSetting(INIDB_BUDGET_INCLUDE_TRANSFERS, false);
@@ -180,7 +182,13 @@ void Option::LoadOptions(bool include_infotable)
     m_transDateDefault = Model_Setting::instance().GetIntSetting("TRANSACTION_DATE_DEFAULT", 0);
     m_usageStatistics = Model_Setting::instance().GetBoolSetting(INIDB_SEND_USAGE_STATS, true);
 
-    m_html_font_size = Model_Setting::instance().GetIntSetting("HTMLSCALE", 100);
+    // Windows problem on high res screens Ref Issue #478
+    int default_font_size = 100;
+#ifdef _WINDOWS
+    default_font_size = 116;
+#endif
+
+    m_html_font_size = Model_Setting::instance().GetIntSetting("HTMLSCALE", default_font_size);
     m_ico_size = 16;
     if (m_html_font_size >= 300)
     {
@@ -209,20 +217,30 @@ wxString Option::DateFormat()
     return m_dateFormat;
 }
 
-void Option::Language(wxString& language)
+void Option::Language(wxLanguage& language)
 {
     m_language = language;
     Model_Setting::instance().Set(LANGUAGE_PARAMETER, language);
 }
 
-wxString Option::Language(bool get_db)
+wxLanguage Option::Language(bool get_db)
 {
     if (get_db)
     {
-        m_language = Model_Setting::instance().GetStringSetting(LANGUAGE_PARAMETER, "english");
+        m_language = static_cast<wxLanguage>(Model_Setting::instance().GetIntSetting(LANGUAGE_PARAMETER, wxLANGUAGE_UNKNOWN));
     }
 
     return m_language;
+}
+
+wxString Option::LanguageISO6391(bool get_db)
+{
+    Option::Language(get_db);
+    if (m_language==wxLANGUAGE_UNKNOWN)
+        return wxEmptyString;
+    if (m_language==wxLANGUAGE_DEFAULT)
+        return wxTranslations::Get()->GetBestTranslation("mmex", wxLANGUAGE_ENGLISH_US).Left(2);
+    return wxLocale::GetLanguageCanonicalName(m_language).Left(2);
 }
 
 void Option::UserName(const wxString& username)
@@ -335,7 +353,6 @@ bool Option::IgnoreFutureTransactions()
     return m_ignoreFutureTransactions;
 }
 
-
 void Option::TransPayeeSelection(int value)
 {
     Model_Setting::instance().Set("TRANSACTION_PAYEE_NONE", value);
@@ -346,7 +363,6 @@ int Option::TransPayeeSelection()
 {
     return m_transPayeeSelection;
 }
-
 
 void Option::TransCategorySelection(int value)
 {
@@ -412,6 +428,23 @@ void Option::HtmlFontSize(int value)
 int Option::HtmlFontSize()
 {
     return m_html_font_size;
+}
+
+void Option::BudgetDaysOffset(int value)
+{
+    Model_Infotable::instance().Set("BUDGET_DAYS_OFFSET", value);
+    m_budget_days_offset = value;
+}
+
+int Option::BudgetDaysOffset()
+{
+    return m_budget_days_offset;
+}
+
+void Option::BudgetDateOffset(wxDateTime& date)
+{
+    if (m_budget_days_offset != 0)
+        date.Add(wxDateSpan::Days(m_budget_days_offset));
 }
 
 void Option::IconSize(int value)
